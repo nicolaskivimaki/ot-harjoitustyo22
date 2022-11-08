@@ -1,0 +1,107 @@
+commit 8338a0692d72756a540ec024bd01576d0ccd7c5d
+Author: Nicolas <kivimakinicolas@gmail.com>
+Date:   Tue Nov 8 21:01:46 2022 +0200
+
+    harjoittelua
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ tiedostoja/file3             | 1 +
+ 3 files changed, 1 insertion(+)
+
+commit 93de7f309b616b8701508767de8b6f1f70649b54
+Author: Nicolas <kivimakinicolas@gmail.com>
+Date:   Tue Nov 8 20:56:20 2022 +0200
+
+    files
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 1fa8acb688eb21d0fdc0ff90cdbcde30c9ba622a
+Author: Nicolas <kivimakinicolas@gmail.com>
+Date:   Tue Nov 8 20:47:32 2022 +0200
+
+    add remove
+
+ eka.txt    | 2 +-
+ kolmas.txt | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+commit e1b8118d1e1fd24601d83d47127474d7cb8653ef
+Author: Nicolas <kivimakinicolas@gmail.com>
+Date:   Tue Nov 8 20:39:34 2022 +0200
+
+    rename
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 0b224f2a52186f1a5ff8f600655d8edb2a5013c3
+Author: Nicolas <kivimakinicolas@gmail.com>
+Date:   Tue Nov 8 20:37:26 2022 +0200
+
+    delete toinen
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit a6a73557a966a2464c03c0b2ed05f62506ab02d1
+Author: Nicolas <kivimakinicolas@gmail.com>
+Date:   Tue Nov 8 20:29:04 2022 +0200
+
+    add text delete text
+
+ tiedosto.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 6dc1d0e5bded4212cb3ded89accb4ff68b75d970
+Author: Nicolas <kivimakinicolas@gmail.com>
+Date:   Tue Nov 8 20:25:54 2022 +0200
+
+    paljon tekstiä
+
+ tiedosto.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 856c63a5de8f6f9cb4a0304a93284b09ff1b022e
+Author: Nicolas <kivimakinicolas@gmail.com>
+Date:   Tue Nov 8 20:17:12 2022 +0200
+
+    muutokset
+
+ kolmas.txt     | 1 +
+ stuff/joku.txt | 0
+ toinen.txt     | 1 +
+ 3 files changed, 2 insertions(+)
+
+commit 2b4d6ff92a4b75939d290d4d621c4a46fc5e0534
+Author: Nicolas <kivimakinicolas@gmail.com>
+Date:   Tue Nov 8 20:15:16 2022 +0200
+
+    kolmas
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit b7835982ac98f4d728cddabce1a61e4d154cf2d3
+Author: Nicolas <kivimakinicolas@gmail.com>
+Date:   Tue Nov 8 20:12:52 2022 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 5a70a5872d1e053df80a7342b8be15ac8f8bc970
+Author: Nicolas <kivimakinicolas@gmail.com>
+Date:   Tue Nov 8 20:08:49 2022 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
