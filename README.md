@@ -8,6 +8,7 @@
 
 [työaikakirjanpito](https://github.com/nicolaskivimaki/ot-harjoitustyo22/blob/master/dokumentaatio/tuntikirjanpito.md)
 
+[changelog](https://github.com/nicolaskivimaki/ot-harjoitustyo22/blob/master/tasohyppelypeli/dokumentaatio/changelog.md)
 
 
 
