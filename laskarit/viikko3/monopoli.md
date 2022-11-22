@@ -4,8 +4,8 @@
 
   classDiagram
     Pelilauta <|-- Pelaaja
-    Pelilauta <|-- Noppa1
     Pelilauta <|-- Noppa2
+    Pelilauta <|-- Noppa1
     Pelilauta <|-- Aloitusruutu
     Pelilauta <|-- Vankila
     Pelilauta <|-- Sattumaruutu
@@ -29,11 +29,11 @@
            
     }
 
-      class Noppa_1{
+      class Noppa2{
         heita()
       }
 
-      class Noppa_2{      
+      class Noppa1{      
         heita()
       }
       
@@ -52,6 +52,11 @@
         
       }
       
+      
+      class Sattumakortit{
+        toiminto()
+      }
+      
       class Yhteismaaruutu{
       
       toiminto()
@@ -59,9 +64,6 @@
       }
       
      
-      class Sattumakortit{
-        toiminto()
-      }
       
       class Yhteismaakortit{
         toiminto()
@@ -74,11 +76,6 @@
         rakenna_hotelli()
       }
       
-      class Asema{
-      
-      toiminto()
-      
-      }
       
       class Laitos{
       
@@ -89,5 +86,12 @@
       class Pankkitili{
         saldo
         maksutapahtuma()
+      }
+      
+      
+      class Asema{
+      
+      toiminto()
+      
       }
 ```
