@@ -1,6 +1,8 @@
 # Ohjelmistotekniikka
 
-### Tasohyppelypeli
+## Tasohyppelypeli
+
+Pygamella toteutetussa tasohyppelypelissä pelaaja hyppii liikkuvia tasoja/alustoja pitkin ylöspäin. Tarkoituksena on päästä mahdollisimman korkealle. Peli vaikeutuu mitä korkeammalle pelaaja pääsee. Hyppiessä pelaaja kohtaa esteitä, joihin voi kuolla tai pudota alemmas. Pelaaja voi myös saada lisäpisteitä ja korkeampia hyppyjä tietyiltä alustoilta.
 
 ## Dokumentaatiot
 
