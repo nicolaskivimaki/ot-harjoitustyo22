@@ -5,6 +5,7 @@
 ### Sovelluksen omainaisuudet:
 * Sovelluksessa pelaaja hyppii automaattisesti ylöspäin kohdatessaan laskeutuessaan alustalle. (Tehty)
 * Pelaajaa voi ohjata sivusuunnassa hypyn aikana. (Tehty)
+* Kentällä olevat alustat liikkuvat satunnaisessa tahdissa. (Tehty)
 * Pelaajan Score kasvaa, mitä korkeammalle hän pääsee.
 * Pelaaja voi saada lisävauhtia hyppyyn erityistasoilta.
 * Pelaaja voi saada lisäpisteitä osumalla esim. kolikkoon.
