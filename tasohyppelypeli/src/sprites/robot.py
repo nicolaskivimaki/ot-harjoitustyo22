@@ -1,8 +1,17 @@
+import os
 import pygame
+dirname = os.path.dirname(__file__)
 
-class Robot(object):
+
+class Robot(pygame.sprite.Sprite):
     def __init__(self):
+        super().__init__()
         self.rect = pygame.rect.Rect((235, 570, 30, 30))
+        self.image = pygame.image.load(os.path.join(dirname, "..", "assets", "robot.png"))
+        self.block = pygame.transform.smoothscale(self.image, (10, 10))
+        self.rect = self.block.get_rect()
+        self.rect.x = 235
+        self.rect.y = 570
         self.jumping = True
         self.jump_counter = 0
 
@@ -10,15 +19,15 @@ class Robot(object):
         key = pygame.key.get_pressed()
         distance = 2
         if key[pygame.K_LEFT]:
-           self.rect.move_ip(-distance, 0)
+            self.rect.move_ip(-distance, 0)
         if key[pygame.K_RIGHT]:
-           self.rect.move_ip(distance, 0)
-    
+            self.rect.move_ip(distance, 0)
+
     def robot_jumping(self):
 
         speed = 3
-        
-        if self.jumping == True:
+
+        if self.jumping is True:
             self.rect.move_ip(0, -speed)
             self.jump_counter += 1
         else:
@@ -32,7 +41,3 @@ class Robot(object):
 
     def draw_robot(self, surface):
         pygame.draw.rect(surface, (0, 160, 0), self.rect)
-
-
-import random
-
