@@ -1,4 +1,6 @@
-# Ohjelmistotekniikka
+# Ohjelmistotekniikka 2022
+
+Harjoitustyö Helsingin yliopiston Ohjelmistotekniikka-kurssille.
 
 ## Tasohyppelypeli
 
