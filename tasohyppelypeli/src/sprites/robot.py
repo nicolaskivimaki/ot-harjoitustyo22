@@ -21,7 +21,7 @@ class Robot(pygame.sprite.Sprite):
             self.move_robot("l")
         if key[pygame.K_RIGHT]:
             self.move_robot("r")
-    
+
     def move_robot(self, direction):
         distance = 2
         if direction == "l":
