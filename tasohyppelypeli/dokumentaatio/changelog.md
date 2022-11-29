@@ -10,4 +10,5 @@
 # Viikko 4
 * Pelin peruslogiikka luotu uudelleen ohjeiden ja esimerkkisovelluksen mukaisella tavalla
 * Peliin lisätty joukko alustoja joilta hahmo voi hyppiä
+* Alusta-joukolle lisätty liikkuvuus 
 * Korjattu ja lisätty testejä sopiviksi järjestelemän uuteen muotoon.
