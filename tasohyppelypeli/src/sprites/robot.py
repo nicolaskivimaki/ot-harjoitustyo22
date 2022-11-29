@@ -17,10 +17,16 @@ class Robot(pygame.sprite.Sprite):
 
     def handle_keys(self):
         key = pygame.key.get_pressed()
-        distance = 2
         if key[pygame.K_LEFT]:
-            self.rect.move_ip(-distance, 0)
+            self.move_robot("l")
         if key[pygame.K_RIGHT]:
+            self.move_robot("r")
+    
+    def move_robot(self, direction):
+        distance = 2
+        if direction == "l":
+            self.rect.move_ip(-distance, 0)
+        if direction == "r":
             self.rect.move_ip(distance, 0)
 
     def robot_jumping(self):
