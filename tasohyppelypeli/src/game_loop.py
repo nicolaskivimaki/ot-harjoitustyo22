@@ -6,7 +6,7 @@ class GameLoop:
         self._level = level
         self._renderer = renderer
         self._event_queue = event_queue
-        self._clock = clock
+        self._clock = clock 
 
     def start(self):
         while True:
@@ -14,8 +14,11 @@ class GameLoop:
                 if event.type == pygame.QUIT:
                     sys.exit()
                     break
-
-            self._renderer.render()
+            self._level.move_sprites()
+            self._level.count_score()
+            score = self._level.get_score()
+            self._renderer.render(score)
+            self._level.adjust_camera()
             self._clock.tick(60)
 
 pygame.quit()
