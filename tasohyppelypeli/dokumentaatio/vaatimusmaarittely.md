@@ -10,7 +10,7 @@
 * Pelaaja voi saada lisävauhtia hyppyyn erityistasoilta.
 * Pelaaja voi saada lisäpisteitä osumalla esim. kolikkoon.
 * Pelaaja voi tippua alemmas, jos osuu viholliseen.
-* Pelaaja kuolee, mikäli alas tullessaan hän ei osu mihinkään tasoon/alustaan. (Tehty osaksi)
+* Pelaaja kuolee, mikäli alas tullessaan hän ei osu mihinkään tasoon/alustaan. (Tehty osittain)
 
 
 ### Suunnitellut lisätoiminnallisuudet:
