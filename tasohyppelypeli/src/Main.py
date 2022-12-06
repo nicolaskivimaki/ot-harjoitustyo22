@@ -6,6 +6,7 @@ from renderer import Renderer
 from clock import Clock
 
 def main():
+
     pygame.init()
     display = pygame.display.set_mode((500, 600))
     display.fill((255, 255, 255))

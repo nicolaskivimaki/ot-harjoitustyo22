@@ -1,7 +1,7 @@
+import random
 import pygame
 from sprites.robot import Robot
 from sprites.block import Block
-import random
 
 class Level:
 
@@ -35,7 +35,7 @@ class Level:
 
         self.all_sprites.add(self.blocks, self.robot)
         self.robot_group.add(self.robot)
-    
+
     def create_blocks(self):
         make_more_blocks = True
         for block in self.blocks:
@@ -46,18 +46,18 @@ class Level:
             new_block = Block(0, -block_y)
             self.blocks.add(new_block)
             self.all_sprites.add(new_block)
-    
+
     def delete_old_blocks(self):
         for block in self.blocks:
             if block.rect.y > 800:
                 self.blocks.remove(block)
                 self.all_sprites.remove(block)
-                
+
 
     def move_sprites(self):
 
         for block in self.blocks:
-                block.move_block()
+            block.move_block()
         self.check_collisions()
         self.robot.handle_keys()
         if len(self.jumped_blocks) == 0:
@@ -67,7 +67,7 @@ class Level:
 
     def check_collisions(self):
 
-        if self.robot.jumping == False:
+        if self.robot.jumping is False:
             collision = pygame.sprite.spritecollide(self.robot, self.blocks, False)
             point_collision = pygame.sprite.spritecollide(self.robot, self.jumped_blocks, False)
             if collision:
@@ -75,7 +75,7 @@ class Level:
             if not point_collision:
                 for block in collision:
                     self.jumped_blocks.add(block)
-    
+
     def count_score(self):
 
         direction = self.robot.get_robot_last_move()
@@ -84,25 +84,22 @@ class Level:
             self.score_counter += 1
         if direction == "d":
             self.score_counter -= 1
-        
+
         if self.score_counter // 10 > self.score_high:
             self.score_high = self.score_counter // 10
-        
+
     def get_score(self):
 
         return self.score_high
-    
+
     def adjust_camera(self):
         direction = self.robot.get_robot_last_move()
         speed = self.robot.get_robot_speed()
 
         if (self.robot.rect.y >= 335 and direction == "u") or len(self.jumped_blocks) < 1:
             return
-        
-        else:
-            for block in self.blocks:
-                block.camera_adjust_block(direction, speed)
-            
-            self.robot.robot_camera_adjust(direction)
 
-                
+        for block in self.blocks:
+            block.camera_adjust_block(direction, speed)
+
+        self.robot.robot_camera_adjust(direction)

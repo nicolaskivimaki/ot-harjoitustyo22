@@ -42,4 +42,4 @@ class Block(pygame.sprite.Sprite):
             self.rect.y -= speed
 
     def draw_block(self, surface):
-        pygame.draw.rect(surface, (211, 211, 211), self.block)
+        pygame.draw.rect(surface, (211, 211, 211), self.rect)

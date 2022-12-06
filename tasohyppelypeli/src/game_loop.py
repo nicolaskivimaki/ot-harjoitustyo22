@@ -6,7 +6,7 @@ class GameLoop:
         self._level = level
         self._renderer = renderer
         self._event_queue = event_queue
-        self._clock = clock 
+        self._clock = clock
 
     def start(self):
         while True:
