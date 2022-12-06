@@ -19,7 +19,7 @@ class Block(pygame.sprite.Sprite):
         self.rect.y = y
 
     def random_direction(self):
-        
+
         return random.randint(0,1)
 
     def move_block(self):
@@ -33,7 +33,7 @@ class Block(pygame.sprite.Sprite):
             self.rect.x += speed
         else:
             self.rect.x -= speed
-    
+
     def camera_adjust_block(self, direction, speed):
 
         if direction == "u":

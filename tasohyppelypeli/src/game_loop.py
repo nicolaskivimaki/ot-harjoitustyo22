@@ -14,6 +14,8 @@ class GameLoop:
                 if event.type == pygame.QUIT:
                     sys.exit()
                     break
+            self._level.delete_old_blocks()
+            self._level.create_blocks()
             self._level.move_sprites()
             self._level.count_score()
             score = self._level.get_score()

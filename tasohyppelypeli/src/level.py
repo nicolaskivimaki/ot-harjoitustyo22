@@ -1,10 +1,13 @@
 import pygame
 from sprites.robot import Robot
 from sprites.block import Block
+import random
 
 class Level:
+
     def __init__(self):
         self.robot = Robot()
+        self.robot_group = pygame.sprite.Group()
         self.blocks = pygame.sprite.Group()
         self.all_sprites = pygame.sprite.Group()
         self.jumped_blocks = pygame.sprite.Group()
@@ -31,7 +34,26 @@ class Level:
             self.blocks.add(block)
 
         self.all_sprites.add(self.blocks, self.robot)
+        self.robot_group.add(self.robot)
     
+    def create_blocks(self):
+        make_more_blocks = True
+        for block in self.blocks:
+            if block.rect.y < -200:
+                make_more_blocks = False
+        if make_more_blocks:
+            block_y = random.randint(250, 350)
+            new_block = Block(0, -block_y)
+            self.blocks.add(new_block)
+            self.all_sprites.add(new_block)
+    
+    def delete_old_blocks(self):
+        for block in self.blocks:
+            if block.rect.y > 800:
+                self.blocks.remove(block)
+                self.all_sprites.remove(block)
+                
+
     def move_sprites(self):
 
         for block in self.blocks:

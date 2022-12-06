@@ -4,12 +4,13 @@ dirname = os.path.dirname(__file__)
 
 
 class Robot(pygame.sprite.Sprite):
+
     def __init__(self):
         super().__init__()
         self.rect = pygame.rect.Rect((235, 570, 30, 30))
         self.image = pygame.image.load(os.path.join(dirname, "..", "assets", "robot.png"))
-        self.block = pygame.transform.smoothscale(self.image, (10, 10))
-        self.rect = self.block.get_rect()
+        self.robot = pygame.transform.smoothscale(self.image, (10, 10))
+        self.rect = self.robot.get_rect()
         self.rect.x = 235
         self.rect.y = 570
         self.speed = 3
@@ -51,25 +52,26 @@ class Robot(pygame.sprite.Sprite):
         if first_jumps:
             if self.jump_counter < 1:
                 self.jumping = True
-    
+
     def start_jump(self):
 
         self.jump_counter = 0
         self.jumping = True
-    
+
     def get_robot_last_move(self):
 
         return self.last_move
-    
+
     def get_robot_speed(self):
 
         return self.speed
-    
+
     def get_robot_y(self):
 
         return self.rect.y
-    
+
     def robot_camera_adjust(self, direction):
+
         if direction == "u":
             self.rect.move_ip(0, self.speed)
         if direction == "d":
