@@ -16,7 +16,7 @@
 * Korjattu ja lisätty testejä sopiviksi järjestelemän uuteen muotoon
 
 # Viikko 5
-* Alustojen collision toimii halutusti: hahmo pysähtyy niihin eikä tipu läpi
+* Alustojen törmäys toimii halutusti: hahmo pysähtyy niihin eikä tipu läpi
 * Pelille on lisätty pistelaskuri
 * Pisteet lisääntyvät hahmon päästessä ylöspäin ja pysyvät samana vaikka hän tippuisi hieman alaspäin
 * Alustat katoavat näytöltä jos hahmo tippuu liikaa
