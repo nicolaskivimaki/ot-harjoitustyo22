@@ -20,3 +20,4 @@
 * Pelille on lisätty pistelaskuri
 * Pisteet lisääntyvät hahmon päästessä ylöspäin ja pysyvät samana vaikka hän tippuisi hieman alaspäin
 * Alustat katoavat näytöltä jos hahmo tippuu liikaa
+* Näkymä seuraa hahmon liikkumista kentällä
