@@ -16,3 +16,20 @@ Ohjelmistossa on tällähetkellä vain yksi näkymä:
 ## Sovelluslogiikka
 
 Sovelluslogiikka sisältää useita luokkia. Näistä tärkeimmät tällähetkellä ovat renderer sekä game_loop. Luokat pyörittävät peliä.
+
+
+## Sekvenssikaavio
+
+Sekvenssikaavio kuvaa robotin liikkumista kentällä
+
+
+```mermaid
+sequenceDiagram
+Game ->> Robot: Start game
+Game ->> Robot: Move robot left
+Robot ->> Game: Update robot position on screen
+Block ->> Game: Update block position on screen
+Game ->> Robot: Move robot right
+Robot ->> Game: Update robot position on screen
+Block ->> Game: Update block position on screen
+Game ->> Robot: End game

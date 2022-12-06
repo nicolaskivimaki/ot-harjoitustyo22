@@ -16,6 +16,10 @@ Pygamella toteutetussa tasohyppelypelissä pelaaja hyppii liikkuvia tasoja/alust
 
 [arkkitehtuuri](https://github.com/nicolaskivimaki/ot-harjoitustyo22/blob/master/tasohyppelypeli/dokumentaatio/arkkitehtuuri.md)
 
+## Release
+
+[Viikon 5 release](https://github.com/nicolaskivimaki/ot-harjoitustyo22/releases/tag/viikko5)
+
 
 ## Asennus
 
