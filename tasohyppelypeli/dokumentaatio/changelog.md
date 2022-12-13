@@ -16,8 +16,9 @@
 * Korjattu ja lisätty testejä sopiviksi järjestelemän uuteen muotoon
 
 # Viikko 5
-* Alustojen törmäys toimii halutusti: hahmo pysähtyy niihin eikä tipu läpi
+* Alustojen törmäys toimii halutusti: hahmo pystyy hyppimään niistä
+* Alustat pysyvät näytön rajoissa eivätkä mene näytöltä yli
 * Pelille on lisätty pistelaskuri
-* Pisteet lisääntyvät hahmon päästessä ylöspäin ja pysyvät samana vaikka hän tippuisi hieman alaspäin
-* Alustat katoavat näytöltä jos hahmo tippuu liikaa
-* Näkymä seuraa hahmon liikkumista kentällä
+* Pisteet lisääntyvät hahmon päästessä ylöspäin ja pysyvät samana vaikka hän tippuisi alaspäin
+* Ohimenneet alustat poistetaan kun etäisyys niihin on kasvanut riittävästi
+* "Kamera" seuraa hahmon liikkumista kentällä
