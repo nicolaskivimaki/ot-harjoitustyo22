@@ -8,5 +8,6 @@
 | 29.11. | 7    | peruslogiikan uudelleen rakentaminen järkevämmällä tavalla, kuvien luominen ja alustojen liikkuminen
 | 3.12. | 6    | alustojen jatkuminen kentän liikkuessa ja näkymä seuraa hahmoa
 | 6.12. | 5    | pistelaskuri ja vanhojen alustojen poistaminen
-| Yht. | 33    |
+| 13.12. | 7    | pelaajan luonnollinen liike ja lisäbuusti-alustat
+| Yht. | 40    |
 
