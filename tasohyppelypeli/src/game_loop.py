@@ -7,8 +7,10 @@ class GameLoop:
         self._renderer = renderer
         self._event_queue = event_queue
         self._clock = clock
+        self.game_state = ""
 
     def start(self):
+        self.game_state = "PLAYING"
         while True:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
