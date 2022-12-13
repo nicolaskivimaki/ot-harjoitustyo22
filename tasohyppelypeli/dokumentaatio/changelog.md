@@ -22,3 +22,8 @@
 * Pisteet lisääntyvät hahmon päästessä ylöspäin ja pysyvät samana vaikka hän tippuisi alaspäin
 * Ohimenneet alustat poistetaan kun etäisyys niihin on kasvanut riittävästi
 * "Kamera" seuraa hahmon liikkumista kentällä
+
+# Viikko 5
+* Pelaajan/robotin liikettä muutettu luonnollisemmaksi
+* Pelaajan liikkeeseen liittyvää koodia paranneltu
+* "Lisäbuustia" tuovat alustat luotu ja toimii
