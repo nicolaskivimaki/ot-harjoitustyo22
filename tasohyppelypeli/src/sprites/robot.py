@@ -5,21 +5,45 @@ dirname = os.path.dirname(__file__)
 
 class Robot(pygame.sprite.Sprite):
 
+    """
+    Robot-luokka on pygame.sprite.Sprite-aliluokka
+    ja edustaa pelissä olevaa robottia/pelaajaa.
+    
+    """
+
     def __init__(self):
+
+        """ init() alustaa robotin kuvalla, aloituspaikalla
+            ja erilaisilla ominaisuuksilla, jotka 
+            määrittävät sen käyttäytymisen pelissä.
+        
+        """
         super().__init__()
         self.rect = pygame.rect.Rect((235, 570, 30, 30))
-        self.image = pygame.image.load(os.path.join(dirname, "..", "assets", "robot.png"))
+        self.image = pygame.image.load(os.path.join(dirname, 
+        "..", "assets", "robot.png"))
         self.robot = pygame.transform.smoothscale(self.image, (10, 10))
         self.rect = self.robot.get_rect()
         self.rect.x = 235
         self.rect.y = 570
+        self.jump_height = 7
+        self.jump_y = 570
+        self.gravity = 0.15
+        self.velocity = self.jump_height
         self.speed = 3
         self.jumping = True
         self.can_fall = False
-        self.jump_counter = 0
-        self.last_move = "u"
+        self.last_move = 0
+
 
     def handle_keys(self):
+
+        """
+        Tarkistaa näppäimmistön syötteen ja 
+        kutsuu move_robot()-funktiota liikuttaakseen robottia
+        vasemmalle tai oikealle.
+
+        """
 
         key = pygame.key.get_pressed()
         if key[pygame.K_LEFT]:
@@ -29,6 +53,12 @@ class Robot(pygame.sprite.Sprite):
 
     def move_robot(self, direction):
 
+        """
+        Liikuttaa robottia/pelaajaa vasemmalle tai oikealle 
+        syötteen perusteella.
+
+        """
+
         if direction == "l":
             self.rect.move_ip(-self.speed, 0)
         if direction == "r":
@@ -36,35 +66,62 @@ class Robot(pygame.sprite.Sprite):
 
     def robot_jumping(self, first_jumps):
 
-        speed = 3
+        """Ohjaa robotti-hyppäyskäytöstä.
 
-        if self.jumping is True:
-            self.rect.move_ip(0, -speed)
-            self.last_move = "u"
-            self.jump_counter += 1
-        else:
-            self.jump_counter -= 1
-            self.rect.move_ip(0, speed)
-            self.last_move = "d"
+        Tämä metodi päivittää robotin sijaintia y-akselilla riippuen siitä,
+        onko se tällä hetkellä hyppäämässä vai putoamassa.
+        
+        Args:
+            first_jumps: Booleani, joka osoittaa, onko robotti hypännyt 
+            jostain pinnasta vielä.Handle the jumping behavior of the robot.
 
-        if self.jump_counter > 60:
-            self.jumping = False
+        """
+
         if first_jumps:
-            if self.jump_counter < 1:
-                self.jumping = True
+            if not (self.rect.y > self.jump_y):
+                self.rect.y -= self.velocity
+                self.last_move = self.velocity
+                self.velocity -= self.gravity
+            else:
+                self.velocity = self.jump_height
+                self.rect.y -= self.velocity
+                self.last_move = self.velocity
+                self.velocity -= self.gravity
+        else:
+            self.rect.y -= self.velocity
+            self.last_move = self.velocity
+            self.velocity -= self.gravity
 
-    def start_jump(self):
+    def start_jump(self, boost=False):
 
-        self.jump_counter = 0
-        self.jumping = True
+        """
+        Aloittaa uuden hypyn.
+
+        Args: 
+            boost: Booleani, joka määrää onko kyseessä 
+            boost-alusta vai ei.
+
+        """
+        if boost:
+            self.velocity = 10
+        else:
+            self.velocity = self.jump_height
+        self.rect.y -= self.velocity
+        self.last_move = self.jump_height
+        self.velocity -= self.gravity
 
     def get_robot_last_move(self):
 
+        """
+        Palauttaa robotin viimeisen liikkeen.
+
+        """
+
         return self.last_move
+    
+    def get_robot_velocity(self):
 
-    def get_robot_speed(self):
-
-        return self.speed
+        return self.velocity
 
     def get_robot_y(self):
 
@@ -72,10 +129,7 @@ class Robot(pygame.sprite.Sprite):
 
     def robot_camera_adjust(self, direction):
 
-        if direction == "u":
-            self.rect.move_ip(0, self.speed)
-        if direction == "d":
-            self.rect.move_ip(0, -self.speed)
+        self.rect.y = 335
 
     def draw_robot(self, surface):
 

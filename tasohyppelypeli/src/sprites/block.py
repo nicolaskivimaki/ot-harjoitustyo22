@@ -5,13 +5,16 @@ dirname = os.path.dirname(__file__)
 
 class Block(pygame.sprite.Sprite):
 
-    def __init__(self, x, y):
+    def __init__(self, x, y, boost=False):
         super().__init__()
         if self.random_direction() == 1:
             self.move_right = True
         else:
             self.move_right = False
-        self.image = pygame.image.load(os.path.join(dirname, "..", "assets", "block.png"))
+        if boost:
+            self.image = pygame.image.load(os.path.join(dirname, "..", "assets", "boost_block.png"))
+        else:
+            self.image = pygame.image.load(os.path.join(dirname, "..", "assets", "block.png"))
         self.block = pygame.transform.smoothscale(self.image, (60, 10))
         self.rect = self.block.get_rect()
         self.rect.x = x
@@ -34,12 +37,9 @@ class Block(pygame.sprite.Sprite):
         else:
             self.rect.x -= speed
 
-    def camera_adjust_block(self, direction, speed):
+    def camera_adjust_block(self, direction):
 
-        if direction == "u":
-            self.rect.y += speed
-        if direction == "d":
-            self.rect.y -= speed
+        self.rect.y += direction
 
     def draw_block(self, surface):
         pygame.draw.rect(surface, (211, 211, 211), self.rect)
