@@ -9,7 +9,7 @@ class Level:
     Level-luokka mahdollistaa ison osan pelin toiminnallisuudesta.
     Tämän luokan avulla voidaan hallita pelin alustoja sekä tutkia
     collisioneita.
-    
+
     """
 
     def __init__(self):
@@ -17,7 +17,7 @@ class Level:
         """
         Luodaan pelin robotti ja alustat ja säilötään näitä omissa
         sprite-ryhmissä.
-        
+
         """
         self.robot = Robot()
         self.robot_group = pygame.sprite.Group()
@@ -34,7 +34,7 @@ class Level:
 
         """
         Luo pelin ensimmäiset alustat.
-        
+
         """
 
         block1 = Block(50, 440)
@@ -62,7 +62,7 @@ class Level:
         Luo loputonta virtaa hyppyalustoja. Jotkin alustat ovat
         korkeamman hypyn aiheuttavia boost-alustoja. Y-koordinaatti
         määrätään osittain satunnaisesti.
-        
+
         """
 
         make_more_blocks = True
