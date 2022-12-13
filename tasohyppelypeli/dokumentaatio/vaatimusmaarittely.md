@@ -7,7 +7,7 @@
 * Pelaajaa voi ohjata sivusuunnassa hypyn aikana. (Tehty)
 * Kentällä olevat alustat liikkuvat satunnaisessa tahdissa. (Tehty)
 * Pelaajan Score kasvaa, mitä korkeammalle hän pääsee. (Tehty)
-* Pelaaja voi saada lisävauhtia hyppyyn erityistasoilta.
+* Pelaaja voi saada lisävauhtia hyppyyn erityistasoilta. (Tehty)
 * Pelaaja voi saada lisäpisteitä osumalla esim. kolikkoon.
 * Pelaaja voi tippua alemmas, jos osuu viholliseen.
 * Pelaaja kuolee, mikäli alas tullessaan hän ei osu mihinkään tasoon/alustaan. (Tehty osittain)
