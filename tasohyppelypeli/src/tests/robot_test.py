@@ -18,10 +18,8 @@ class TestBlocks(unittest.TestCase):
     
     def test_robot_comes_down_after_jump(self):
         over = False
-        for i in range(1000):
+        for i in range(100):
             self.robot.robot_jumping(first_jumps=True)
-            if self.robot.rect.y > 570:
-                over = True
             if self.robot.rect.y < 200:
                 over = True
 
@@ -41,7 +39,7 @@ class TestBlocks(unittest.TestCase):
         self.assertEqual(str(self.robot.jumping), "True")
 
     def test_returns_last_move(self):
-        self.assertEqual(str(self.robot.get_robot_last_move()), "u")
+        self.assertEqual(str(self.robot.get_robot_last_move()), "0")
         
     def test_returns_speed(self):
         self.assertEqual(str(self.robot.get_robot_speed()), "3")
@@ -49,17 +47,11 @@ class TestBlocks(unittest.TestCase):
     def test_returns_robot_y(self):
         self.assertEqual(str(self.robot.get_robot_y()), "570")
 
-    def test_robot_adjusts_for_camera_down(self):
+    def test_robot_adjusts_camera(self):
         start_y = self.robot.rect.y
-        self.robot.robot_camera_adjust("d")
+        self.robot.robot_camera_adjust(direction=None)
 
-        self.assertLess(str(self.robot.rect.y), f"{start_y}")
-
-    def test_robot_adjusts_for_camera_up(self):
-        start_y = self.robot.rect.y
-        self.robot.robot_camera_adjust("u")
-
-        self.assertGreater(str(self.robot.rect.y), f"{start_y}")
+        self.assertNotEqual(str(self.robot.rect.y), f"{start_y}")
     
     def test_robot_draw(self):
         surface = pygame.display.set_mode((500, 600))

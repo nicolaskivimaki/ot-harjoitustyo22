@@ -126,6 +126,10 @@ class Robot(pygame.sprite.Sprite):
     def get_robot_y(self):
 
         return self.rect.y
+    
+    def get_robot_speed(self):
+
+        return self.speed
 
     def robot_camera_adjust(self, direction):
 

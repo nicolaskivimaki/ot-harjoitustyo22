@@ -27,13 +27,13 @@ class TestBlocks(unittest.TestCase):
     
     def test_block_adjusts_for_camera_up(self):
         start_y = self.block.rect.y
-        self.block.camera_adjust_block("u", 3)
+        self.block.camera_adjust_block(3)
 
         self.assertGreater(str(self.block.rect.y), f"{start_y}")
 
     def test_block_adjusts_for_camera_down(self):
         start_y = self.block.rect.y
-        self.block.camera_adjust_block("d", 3)
+        self.block.camera_adjust_block(-3)
 
         self.assertLess(str(self.block.rect.y), f"{start_y}")
     
