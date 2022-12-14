@@ -67,13 +67,14 @@ class Level:
 
         make_more_blocks = True
         for block in self.blocks:
-            if block.rect.y < -200:
+            if block.rect.y < -200 and len(self.blocks) > 6:
                 make_more_blocks = False
         if make_more_blocks:
 
             block_y = random.randint(250, 350)
             if 293 < block_y < 308:
                 new_block = Block(0, -block_y, boost=True)
+                self.blocks.add(new_block)
                 self.boost_blocks.add(new_block)
             else:
                 new_block = Block(0, -block_y)

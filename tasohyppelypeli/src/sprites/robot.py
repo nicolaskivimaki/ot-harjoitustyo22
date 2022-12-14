@@ -54,6 +54,11 @@ class Robot(pygame.sprite.Sprite):
             self.rect.move_ip(-self.speed, 0)
         if direction == "r":
             self.rect.move_ip(self.speed, 0)
+        
+        if self.rect.x < -20:
+            self.rect.x = 499
+        if self.rect.x > 500:
+            self.rect.x = -20
 
     def robot_jumping(self, first_jumps):
 
