@@ -8,8 +8,4 @@
 * Kentällä olevat alustat liikkuvat satunnaisessa tahdissa.
 * Pelaajan Score kasvaa, mitä korkeammalle hän pääsee.
 * Pelaaja voi saada lisävauhtia hyppyyn erityistasoilta.
-* Pelaaja voi saada lisäpisteitä osumalla esim. kolikkoon. (TEKEMÄTTÄ!!!!!)
-* Pelaaja voi tippua alemmas, jos osuu viholliseen. (TEKEMÄTTÄ!!!!!)
 * Pelaaja kuolee, mikäli alas tullessaan hän ei osu mihinkään tasoon/alustaan.
-
-
