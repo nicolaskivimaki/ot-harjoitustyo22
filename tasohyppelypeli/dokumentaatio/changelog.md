@@ -23,7 +23,17 @@
 * Ohimenneet alustat poistetaan kun etäisyys niihin on kasvanut riittävästi
 * "Kamera" seuraa hahmon liikkumista kentällä
 
-# Viikko 5
+# Viikko 6
 * Pelaajan/robotin liikettä muutettu luonnollisemmaksi
 * Pelaajan liikkeeseen liittyvää koodia paranneltu
 * "Lisäbuustia" tuovat alustat luotu ja toimii
+
+
+# Viikko 7
+* Aloitus ja lopetusnäyttö luotu
+* Luotu SQL tietokanta pisteytykselle
+* Kirjautuminen käyttäjälle, jotta hän voi asettaa pelaajalle nimen
+* Aloitusnäytöllä pistetaulukko ja näiden pelaajien nimet
+* Luotu pelistä poistuminen ja pelin uudelleen käynnistys
+* Pelaaja "kuolee"/peli loppuu kun hän tippuu tarpeeksi alas alustoista
+
