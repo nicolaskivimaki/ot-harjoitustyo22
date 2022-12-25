@@ -35,10 +35,3 @@ class Database():
         data = self.get_data_()
         top_scores = sorted(data, key=itemgetter('score', 'player'), reverse=True)
         return top_scores[:10]
-
-database = Database()
-database.add_score("Miisa", 73)
-top = database.get_top_10()
-
-print(top[0]['player'])
-print(top[0]['score'])

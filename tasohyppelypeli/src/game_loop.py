@@ -38,7 +38,7 @@ class GameLoop:
                 self.game_loop()
 
             if self.game_state == "GAME OVER":
-                self.game_over()
+                self.game_over(mouse_pos)
 
             self._clock.tick(60)
     
@@ -66,11 +66,14 @@ class GameLoop:
         button = self._end_screen._button
         if mouse_pos:
             if button.x <= mouse_pos[0] <= button.x + button.width and button.y <= mouse_pos[1] <= button.y + button.height:
-                self.game_state = "PLAYING"
+                self.game_state = "START"
         heading = self._end_screen.heading_text()
+        score_text_pos = self._end_screen._score_pos
+        score_text = self._end_screen.score_text(self._level.score_high)
         heading_pos = self._end_screen._heading_pos
         self._renderer.render_blank_screen()
         self._renderer.render_text(heading, heading_pos)
+        self._renderer.render_text(score_text, score_text_pos)
         self.render_leaderboard()
         self._renderer.render_button(button)
         self._renderer.update_screen()

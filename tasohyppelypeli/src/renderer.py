@@ -16,8 +16,7 @@ class Renderer:
 
     def render_leaderboard(self, rows, font_styles, headers):
 
-        i = 30
-        column_space = 50
+        i = 20
 
         column_font = pygame.font.SysFont(font_styles[0], font_styles[1])
         header_font = pygame.font.SysFont(font_styles[2], font_styles[3])
@@ -27,9 +26,9 @@ class Renderer:
         header = headfont.render('LEADERBOARD', True, (0, 0, 0))
         head1 = header_font.render('PLAYER', True, (0, 0, 0))
         head2 = header_font.render('SCORE', True, (0, 0, 0))
-        self._display.blit(header, ((150, 250)))
-        self._display.blit(head1, ((100, 300)))
-        self._display.blit(head2, ((250, 300)))
+        self._display.blit(header, ((130, 250)))
+        self._display.blit(head1, ((120, 310)))
+        self._display.blit(head2, ((295, 310)))
 
         for row in rows:
 
@@ -37,8 +36,8 @@ class Renderer:
             score = row['score']
             column1 = column_font.render('{:>3}'.format(name), True, (0, 0, 0))
             column2 = column_font.render('{:30}'.format(score), True, (0, 0, 0))
-            self._display.blit(column1, ((120, 330 + i)))
-            self._display.blit(column2, ((120 + column_space, (700 / 4) + i + 5)))
+            self._display.blit(column1, ((140, 330 + i)))
+            self._display.blit(column2, ((215, 330 + i)))
 
             i += 20
     
@@ -65,8 +64,8 @@ class Renderer:
 
         score_text = f"SCORE: {score}"
         colour = (0, 0, 0)
-        position = (390, 2)
-        font = pygame.font.SysFont("arial black", 16)
+        position = (380, 2)
+        font = pygame.font.SysFont("arial black", 20)
         text = font.render(score_text, True, colour)
         self._display.blit(text, (position))
 
