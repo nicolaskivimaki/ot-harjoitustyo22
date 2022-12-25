@@ -5,6 +5,7 @@ from ui.level import Level
 from game_loop import GameLoop
 from features.event_que import EventQueue
 from features.renderer import Renderer
+from features.button import Button
 from features.clock import Clock
 from sprites.block import Block
 
@@ -33,3 +34,14 @@ class TestLevel(unittest.TestCase):
             self.level.move_sprites()
             self.level.count_score()
         self.assertGreater(str(self.level.score_high), "0") 
+
+class TestButton(unittest.TestCase):
+    def test_init(self):
+        button = Button(100, 200, 300, 400, text="Click me", font_size=24, border_width=4)
+        assert button.x == 100
+        assert button.y == 200
+        assert button.width == 300
+        assert button.height == 400
+        assert button.text == "Click me"
+        assert button.font_size == 24
+        assert button.border_width == 4
