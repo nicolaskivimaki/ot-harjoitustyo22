@@ -35,4 +35,5 @@
 * Kirjautuminen käyttäjälle, jotta hän voi asettaa pelaajalle nimen
 * Aloitusnäytöllä pistetaulukko ja näiden pelaajien nimet
 * Luotu pelistä poistuminen ja pelin uudelleen käynnistys
+* Pelaaja "kuolee"/peli loppuu kun hän tippuu tarpeeksi alas alustoista
 
