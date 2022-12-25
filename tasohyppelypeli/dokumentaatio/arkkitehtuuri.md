@@ -8,10 +8,26 @@ Ohjelmassa on varsinainen koodi src tiedoston sisällä. Sprites sisältää eri
 
 ## Käyttöliittymä
 
-Ohjelmistossa on tällähetkellä vain yksi näkymä:
+Ohjelmistossa on kolme käyttöliittymän näkymää:
 
+* Pelin aloitus
 * Pelikenttä
+* Pelin lopetus
 
+```mermaid
+
+sequenceDiagram
+participant StartGame
+participant Game
+participant GameOver
+
+StartGame->>Game: start_game()
+Game->>GameOver: end_game()
+GameOver->>Game: restart()
+GameOver->>StartGame: exit()
+
+
+```
 
 ## Sovelluslogiikka
 
