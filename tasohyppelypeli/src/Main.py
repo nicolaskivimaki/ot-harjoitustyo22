@@ -1,9 +1,9 @@
 import pygame
-from level import Level
+from ui.level import Level
 from game_loop import GameLoop
-from event_que import EventQueue
-from renderer import Renderer
-from clock import Clock
+from features.event_que import EventQueue
+from features.renderer import Renderer
+from features.clock import Clock
 
 def main():
 

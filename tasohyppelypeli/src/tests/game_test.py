@@ -1,13 +1,11 @@
 import unittest
 import pygame
 import sys
-from level import Level
+from ui.level import Level
 from game_loop import GameLoop
-from event_que import EventQueue
-from renderer import Renderer
-from clock import Clock
-from level import Level
-from clock import Clock
+from features.event_que import EventQueue
+from features.renderer import Renderer
+from features.clock import Clock
 from sprites.block import Block
 
 class TestClock(unittest.TestCase):
@@ -34,5 +32,4 @@ class TestLevel(unittest.TestCase):
         for i in range(100):
             self.level.move_sprites()
             self.level.count_score()
-        self.assertGreater(str(self.level.score_counter), "0") 
         self.assertGreater(str(self.level.score_high), "0") 

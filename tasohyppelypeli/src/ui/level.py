@@ -130,7 +130,7 @@ class Level:
     def game_over(self):
 
         for block in self.blocks:
-            if block.rect.y + self.robot.rect.y < -2000:
+            if block.rect.y + self.robot.rect.y < -1500:
                 return True
 
     def get_score(self):

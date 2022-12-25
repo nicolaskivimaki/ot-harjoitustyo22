@@ -1,5 +1,5 @@
 import pygame
-from button import Button
+from features.button import Button
 
 class StartScreen():
 

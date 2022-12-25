@@ -1,9 +1,9 @@
 import sys
 import pygame
 from pygame.locals import *
-from start_screen import StartScreen
-from end_screen import EndScreen
-from leaderboard import LeaderBoard
+from ui.start_screen import StartScreen
+from ui.end_screen import EndScreen
+from features.leaderboard import LeaderBoard
 
 class GameLoop:
 
