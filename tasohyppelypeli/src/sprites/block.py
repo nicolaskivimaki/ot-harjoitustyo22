@@ -24,6 +24,10 @@ class Block(pygame.sprite.Sprite):
     def random_direction(self):
 
         return random.randint(0,1)
+    
+    def get_block_y(self):
+
+        return self.rect.y
 
     def move_block(self):
 

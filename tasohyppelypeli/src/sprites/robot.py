@@ -55,6 +55,11 @@ class Robot(pygame.sprite.Sprite):
         if direction == "r":
             self.rect.move_ip(self.speed, 0)
         
+        if direction == "up":
+            self.rect.move_ip(0, 20)
+        if direction == "down":
+            self.rect.move_ip(0, -20)
+        
         if self.rect.x < -20:
             self.rect.x = 499
         if self.rect.x > 500:

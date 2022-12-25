@@ -102,9 +102,11 @@ class Level:
     def check_collisions(self):
 
         if self.robot.get_robot_velocity() < 0:
+            self.robot.move_robot("up")
             collision = pygame.sprite.spritecollide(self.robot, self.blocks, False)
             point_collision = pygame.sprite.spritecollide(self.robot, self.jumped_blocks, False)
             boost_collision = pygame.sprite.spritecollide(self.robot, self.boost_blocks, False)
+            self.robot.move_robot("down")
             if boost_collision:
                 self.robot.start_jump(boost=True)
             if collision and not boost_collision:
@@ -124,6 +126,12 @@ class Level:
 
         if self.score_counter // 5 > self.score_high:
             self.score_high = self.score_counter // 5
+        
+    def game_over(self):
+
+        for block in self.blocks:
+            if block.rect.y + self.robot.rect.y < -2000:
+                return True
 
     def get_score(self):
 
